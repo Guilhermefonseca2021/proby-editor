@@ -1,11 +1,18 @@
 import { useState } from "react";
+import { toast } from 'react-toastify';
+import ToasterMessage from "./toaster";
 
-export const Card = () => {
-  const [liked, setLike] = useState<boolean | null>();
-  const [unliked, setUnlike] = useState<boolean | null>();
+export default function Card() {
+  const [liked, setLike] = useState<boolean>(false);
+  const [unliked, setUnlike] = useState<boolean>(false);
 
   function handleClick() {
     console.log("clicked");
+    toast(ToasterMessage("Feedback sent!", "we enjoy you cover letter in the work."), {
+      className: 'p-0 border border-purple-600/40 bg-[#232531]',
+      closeButton: true,
+    });
+    
     if (liked) {
       console.log("liked");
     } else if (unliked) {
@@ -16,7 +23,7 @@ export const Card = () => {
   }
 
   return (
-    <div className="w-56 bg-white border border-slate-200 grid grid-cols-6 gap-2 rounded-xl p-2 text-sm  ">
+    <div className="w-56 bg-white border border-slate-200 grid grid-cols-6 gap-2 rounded-xl p-2 text-sm absolute bottom-2 right-5 ">
       <h1 className="text-center text-slate-200 text-xl font-bold col-span-6">Send Feedback</h1>
       <textarea placeholder="Your feedback..." className="bg-slate-100 text-slate-600 h-28 placeholder:text-slate-600 placeholder:opacity-50 border border-slate-200 col-span-6 resize-none outline-none rounded-lg p-2 duration-300 focus:border-slate-600" defaultValue={""} />
       <button 

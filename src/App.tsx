@@ -1,10 +1,10 @@
 import "./App.css"
-import { Card } from "./components/card"
+import Layout from "./layout/Layout";
 
 export default function App() {
     return (
         <>
-            <Card />
+          <Layout />  
         </>
     )
 }
