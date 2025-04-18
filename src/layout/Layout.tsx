@@ -1,9 +1,10 @@
-import Home from "../pages/Home";
+import UploadDeleteBar from "../components/uploadDeleteBar";
 
 export default function Layout() {
   return (
     <div>
-      <Home />
+      <UploadDeleteBar />
+      
     </div>
   )
 }

@@ -1,10 +1,10 @@
 import "./App.css"
-import Layout from "./layout/Layout";
+import Router from "./layout/_routes";
 
 export default function App() {
     return (
         <>
-          <Layout />  
+          <Router />  
         </>
     )
 }
