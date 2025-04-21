@@ -1,4 +1,3 @@
-
 export default function ToasterMessage(message: string, description: string) {
   return (
     <div className="flex flex-col gap-2 w-60 sm:w-72 text-[10px] sm:text-xs z-50">
