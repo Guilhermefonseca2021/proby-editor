@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import imageToEdit from '../store/imageToEdit';
+import imageToEdit from '../store/ImageToEdit';
 
 export default function useReactPhotoEditor() {
   const { file, setFile, toggleModal, showModal } = imageToEdit();

@@ -2,7 +2,7 @@ import { usePhotoEditor } from 'react-photo-editor';
 import { useNavigate } from 'react-router-dom';
 
 export default function CustomPhotoEditor(file: File) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const {
     canvasRef,
@@ -18,6 +18,7 @@ export default function CustomPhotoEditor(file: File) {
     defaultContrast: 100,
     defaultSaturate: 100,
     defaultGrayscale: 0,
+    
   });
 
   const handleSave = async () => {
@@ -39,7 +40,7 @@ export default function CustomPhotoEditor(file: File) {
           onChange={(e) => setBrightness(Number(e.target.value))}
         />
       </div>
-      
+
       <button onClick={handleZoomIn}>Zoom In</button>
       <button onClick={handleZoomOut}>Zoom Out</button>
       <button onClick={resetFilters}>Reset</button>
